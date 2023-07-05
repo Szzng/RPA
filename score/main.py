@@ -31,7 +31,7 @@ for subject in subjects:
     for i in range(students_num):
         sentence = ''
         for j in range(len(index[subject]) - 1):
-            sentence += random.choice(globals()["temp{}".format(j)]) + ' '
+            sentence += ' ' + random.choice(globals()["temp{}".format(j)])
             sentence = sentence.replace('\t', '')
         finalDict[subject].append(sentence)
 
