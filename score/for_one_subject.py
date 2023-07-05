@@ -34,6 +34,7 @@ for subject in subjects:
           for j in range(len(index[subject]) - 1):
               sentence += random.choice(globals()["temp{}".format(j)]) + ' '
               sentence = sentence.replace('\t', '')
+          sentence = sentence.strip()
           finalDict[num].append(sentence)
 
     df = pd.DataFrame(finalDict)
