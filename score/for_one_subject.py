@@ -1,7 +1,7 @@
 import pandas as pd
 import random
 
-data = 'data.xlsx'
+data = 'predata.xlsx'
 subjectsDict = pd.read_excel(data, engine='openpyxl', sheet_name=None, header=None)
 for i in subjectsDict:
   subjectsDict[i] = subjectsDict[i].dropna()
@@ -20,7 +20,7 @@ for subject in subjects:
 
       index[subject] = []
       for i in range(len(temp)):
-          if '[' in temp[i]:
+          if '#' in temp[i]:
               index[subject].append(i)
       index[subject].append(len(temp))
 
