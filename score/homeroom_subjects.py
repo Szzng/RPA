@@ -4,7 +4,7 @@ import random
 data = 'predata.xlsx'
 subjectsDict = pd.read_excel(data, engine='openpyxl', sheet_name=None, header=None)
 for i in subjectsDict:
-  subjectsDict[i] = subjectsDict[i].dropna()
+    subjectsDict[i] = subjectsDict[i].dropna()
 
 index = {}
 finalDict = {}
@@ -27,7 +27,7 @@ for subject in subjects:
         globals()["temp{}".format(i)] = temp[index[subject][i] + 1:index[subject][i + 1]]
 
     finalDict[subject] = []
-    students_num= 35
+    students_num = 35
     for i in range(students_num):
         sentence = ''
         for j in range(len(index[subject]) - 1):
