@@ -37,4 +37,4 @@ for subject in subjects:
         finalDict[subject].append(sentence)
 
 df = pd.DataFrame(finalDict)
-df.to_excel('done.xlsx')
+df.to_excel(data.split('.')[0] + 'done.xlsx')
